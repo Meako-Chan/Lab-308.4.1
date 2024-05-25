@@ -62,11 +62,13 @@ let csv_reformat = '';
 let properties = Object.keys(key_values[0]);
 let row = properties.join(",");
 csv_reformat += row + "\n";
-for(let i = 0; i < properties.length; i++){
+for(let i = 0; i < key_values.length; i++){
     row = Object.values(key_values[i]).join(',') + '\n';
     csv_reformat += row;
 }
 console.log('Part 5: CSV Format ')
 console.log(csv_reformat);
+
+
 
 
