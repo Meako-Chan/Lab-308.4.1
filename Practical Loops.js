@@ -49,10 +49,19 @@ let average_age = 0;
     average_age += Number(key_values[i].age);
  }
 average_age /= key_values.length;
-// console.log(average_age);
-console.log(key_values);
+// console.log(key_values);
 
 //Part 5: Transform backinto CSV format
 let csv_reformat = '';
+
+//Store properties of each person
+let properties = Object.keys(key_values[0]);
+let row = properties.join(",");
+csv_reformat += row + "\n";
+for(let i = 0; i < properties.length; i++){
+    row = Object.values(key_values[i]).join(',') + '\n';
+    csv_reformat += row;
+}
+console.log(csv_reformat);
 
 
