@@ -1,5 +1,5 @@
 
-// Part 1 & Part 2 (Pasted from past lab)Bruce,Knight,41\n57,Bob,Fry Cook,19\n63,Blaine,Q
+// Part 1 & Part 2 (Pasted from past lab)
 let test = 'ID,Name,Occupation,Age\n42,uiz Master,58\n98,Bill,Doctor’s Assistant,26'
 let test1 = 'ID,Name,Occupation,Age\n42,Bruce,Knight,41\n57,Bob,Fry Cook,19\n63,Blaine,Quiz Master,58\n98,Bill,Doctor’s Assistant,26';
 let lines = test1.split('\n');
@@ -35,11 +35,11 @@ let person2 = {id: "48", name:"Barry", occupation: "Runner", age: "25" };
 let index = 1;
 //Split the key values, insert person2 at index1 the concat with the rest of the array.
 //Alternate way: key_values = key_values.slice(0, index).concat(person2, key_values.slice(index));
- key_values = [...key_values.slice(0,index), person2, ...key_values.slice(index)];
+key_values = [...key_values.slice(0,index), person2, ...key_values.slice(index)];
 
 let person3 = {id: "7", name:"Bilbo", occupation: "None", age: "111" };
  //Insert person3 at end of array
- key_values.push(person3);
+key_values.push(person3);
 
  
 //Calculate average age of the group
@@ -49,9 +49,10 @@ let average_age = 0;
     average_age += Number(key_values[i].age);
  }
 average_age /= key_values.length;
-console.log(average_age);
+// console.log(average_age);
+console.log(key_values);
 
-//Part 5:
-
+//Part 5: Transform backinto CSV format
+let csv_reformat = '';
 
 
