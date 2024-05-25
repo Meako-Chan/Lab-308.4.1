@@ -26,6 +26,9 @@ for(let i = 1; i < cells.length; i++){
     key_values.push(person);
 }
 
+console.log('Part 3 Key Values:');
+console.log(key_values);
+
 //Part 4 Sorting and Manipulating Data
 //Insert new object at index 1
 //Remove Last Index
@@ -49,8 +52,9 @@ let average_age = 0;
     average_age += Number(key_values[i].age);
  }
 average_age /= key_values.length;
-// console.log(key_values);
-
+console.log('Part 4: Average Age: ' + average_age);
+console.log('Key Values Edited:');
+console.log(key_values)
 //Part 5: Transform backinto CSV format
 let csv_reformat = '';
 
@@ -62,6 +66,7 @@ for(let i = 0; i < properties.length; i++){
     row = Object.values(key_values[i]).join(',') + '\n';
     csv_reformat += row;
 }
+console.log('Part 5: CSV Format ')
 console.log(csv_reformat);
 
 
